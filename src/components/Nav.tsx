@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const links = ['skills', 'experience', 'projects', 'education', 'contact']
+const sectionLinks = ['skills', 'experience', 'projects', 'education', 'contact']
 
 export default function Nav() {
   const [active, setActive] = useState('')
@@ -22,7 +22,7 @@ export default function Nav() {
     <nav>
       <div className="nav-logo">Ryan Nguyen</div>
       <ul className="nav-links">
-        {links.map((id) => (
+        {sectionLinks.map((id) => (
           <li key={id}>
             <a
               href={`#${id}`}
@@ -32,6 +32,11 @@ export default function Nav() {
             </a>
           </li>
         ))}
+        <li>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+        </li>
       </ul>
     </nav>
   )
