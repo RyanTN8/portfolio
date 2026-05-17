@@ -13,9 +13,9 @@ const jobs: Job[] = [
     dates: 'Jun 2026',
     company: 'Genuine Parts Company',
     badge: { label: 'Incoming', incoming: true },
-    role: 'Software Engineering Intern — AI Databases Team',
+    role: 'Software Engineering Intern — Databases Team',
     bullets: [
-      <>Joining the <strong>AI Databases Team</strong> to work on intelligent data infrastructure at scale.</>,
+      <>Joining the <strong>Databases Team</strong> to work on data infrastructure at scale.</>,
     ],
   },
   {
@@ -23,9 +23,18 @@ const jobs: Job[] = [
     company: 'LearnHaus AI',
     role: 'Technical Lead',
     bullets: [
-      <>Led a team of <strong>9 engineers</strong> to design and launch an internal evaluation platform for a production <strong>LLM scoring system</strong>, enabling standardized benchmarking across 4+ LLMs.</>,
-      <>Architected three evaluation workflows—interactive scoring playground, human-vs-model comparison, and dataset-level pattern analysis—reducing iteration time from <strong>2–3 days to under 2 hours (95% reduction)</strong>.</>,
-      <>Built analytics tooling (MAE, variance, correlation, clustering) uncovering <strong>12+ previously undetected biases</strong> across 1K+ production scoring outputs.</>,
+      <>Shipped the company's first <strong>LLM evaluation platform</strong>, leading a team of <strong>9 engineers</strong>, standardizing benchmarking across <strong>4+ frontier models</strong> and unblocking model selection, regression testing, and prompt iteration for ML and product teams.</>,
+      <>Designed and shipped three integrated workflows—scoring playground, human-vs-model comparison, and dataset-level pattern analysis—with unified side-by-side diffing, compressing iteration cycles from <strong>2–3 days to under 2 hours (95% reduction)</strong>.</>,
+      <>Engineered statistical analytics tooling (MAE, variance, correlation, clustering) that surfaced <strong>12+ scoring biases</strong> across <strong>1K+ production outputs</strong>, directly informing model retraining and evaluation priorities.</>,
+    ],
+  },
+  {
+    dates: 'Nov 2025 – Present',
+    company: 'UC Berkeley',
+    role: 'Teaching Assistant — Full-Stack Development',
+    bullets: [
+      <>Instructed <strong>100+ students per semester</strong> across lectures and office hours on React, Node/Express, Flask/Django, MongoDB, SQL, Firebase, and DevOps, supporting debugging and full-stack project development.</>,
+      <>Engineered course infrastructure at scale: authored <strong>20+ pytest/Jest autograders</strong> for React components, REST endpoints, and auth flows; built a submission platform for <strong>2,000+ assignments</strong>; shipped a ticketing system and <strong>15+ automation scripts</strong>.</>,
     ],
   },
   {
@@ -33,10 +42,8 @@ const jobs: Job[] = [
     company: 'Newrium Foundation',
     role: 'Software Engineering Intern',
     bullets: [
-      <>Developed and shipped <strong>15+ responsive UI components</strong> using TypeScript, React, and Next.js, improving page load time and boosting mobile accessibility.</>,
-      <>Designed relational schemas and optimized queries using <strong>MySQL</strong>, enabling efficient storage of 100+ entries and reducing query latency.</>,
-      <>Built an automated <strong>email pipeline</strong> using Node.js and SQL task queues, sending weekly updates to subscribers.</>,
-      <>Coordinated API contract design and testing with a <strong>10-person team</strong>, reducing integration errors.</>,
+      <>Shipped <strong>15+ production-ready responsive UI components</strong> using TypeScript, React, and Next.js, improving page load time and elevating user experience across the platform's core workflows.</>,
+      <>Architected <strong>MySQL schemas</strong> storing <strong>100+ entries</strong> and built a <strong>Node.js email pipeline</strong> with SQL task queues for weekly subscriber updates, while coordinating API contract design with a 10-person team to reduce integration errors.</>,
     ],
   },
 ]

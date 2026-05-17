@@ -3,15 +3,15 @@ import FadeUp from './FadeUp'
 const columns = [
   {
     title: 'Languages',
-    items: ['Python', 'Java', 'TypeScript', 'JavaScript', 'C / C++', 'SQL', 'HTML / CSS', 'RISC-V / x86 / MIPS'],
+    items: ['Python', 'Java', 'Go', 'TypeScript', 'JavaScript', 'C / C++', 'SQL', 'HTML / CSS', 'Assembly (MIPS, x86, RISC-V)'],
   },
   {
     title: 'Backend & Data',
-    items: ['Node.js', 'FastAPI', 'Spring Boot', 'PostgreSQL', 'MySQL', 'Firebase / Firestore', 'Docker', 'REST APIs'],
+    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot', 'WebFlux', 'Resilience4j', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase / Firestore', 'Docker', 'AWS'],
   },
   {
     title: 'Frontend & Systems',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'TensorFlow', 'PyTorch', 'Git', 'Bash'],
+    items: ['React', 'Next.js', 'Tailwind CSS', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'CI/CD', 'Git', 'Linux', 'Bash', 'pytest', 'Jest'],
   },
 ]
 

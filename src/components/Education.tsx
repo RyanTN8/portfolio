@@ -4,6 +4,7 @@ const courses = [
   'Data Structures & Algorithms',
   'Efficient Algorithms & Intractable Problems',
   'Computer Architecture',
+  'Operating Systems',
   'Machine Learning',
   'Databases',
   'Discrete Math & Probability',
@@ -21,7 +22,7 @@ export default function Education() {
       <FadeUp delay={1}>
         <div className="edu-row">
           <div className="edu-left">
-            <div className="edu-period">2023 – Present</div>
+            <div className="edu-period">2023 – May 2027</div>
             <div className="edu-location">Berkeley, CA</div>
           </div>
           <div className="edu-right">
