@@ -44,6 +44,18 @@ const projects: Project[] = [
     ],
     stack: ['Go', 'net/http/httputil'],
   },
+  {
+    name: 'Laser Tag',
+    subtitle: 'Social Media Platform',
+    desc: 'Campus social platform for event discovery and student engagement. Python FastAPI backend with real-time Firestore sync, Google OAuth, and media upload pipelines.',
+    metrics: [
+      <><strong>35+</strong> verified student accounts</>,
+      <><strong>100+</strong> student-uploaded images</>,
+      <><strong>35%</strong> engagement improvement from launch</>,
+      <>Real-time data sync across all clients</>,
+    ],
+    stack: ['Python', 'FastAPI', 'React', 'Firebase', 'Firestore', 'Google OAuth', 'Firebase Storage'],
+  },
 ]
 
 export default function Projects() {
