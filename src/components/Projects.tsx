@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import FadeUp from './FadeUp'
 
 interface Project {
@@ -62,6 +63,56 @@ const projects: Project[] = [
   },
 ]
 
+function FlipCard({ p, index }: { p: Project; index: number }) {
+  const [flipped, setFlipped] = useState(false)
+
+  return (
+    <div
+      className={`flip-card${flipped ? ' flipped' : ''}`}
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+      onClick={() => setFlipped((f) => !f)}
+    >
+      <div className="flip-inner">
+        {/* Front */}
+        <div className="flip-front">
+          <div className="flip-num">0{index + 1}</div>
+          <div className="flip-project-name">{p.name}</div>
+          <div className="flip-project-sub">{p.subtitle}</div>
+          <p className="flip-project-desc">{p.desc}</p>
+          <div className="flip-hint">Hover to see details →</div>
+        </div>
+
+        {/* Back */}
+        <div className="flip-back">
+          <div className="flip-back-top">
+            <div className="flip-back-label">Impact</div>
+            <div className="flip-metrics">
+              {p.metrics.map((m, i) => (
+                <div key={i} className="flip-metric">{m}</div>
+              ))}
+            </div>
+            <div className="flip-back-label">Stack</div>
+            <div className="flip-tags">
+              {p.stack.map((t) => (
+                <span key={t} className="flip-tag">{t}</span>
+              ))}
+            </div>
+          </div>
+          {p.link && (
+            <a href={p.link} target="_blank" rel="noopener noreferrer" className="flip-link">
+              {p.link.includes('github.com') ? 'View on GitHub' : 'Live Demo'}
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Projects() {
   return (
     <section id="projects">
@@ -71,35 +122,10 @@ export default function Projects() {
           <div className="section-title">Projects</div>
         </div>
       </FadeUp>
-      <div className="projects-list">
+      <div className="projects-grid">
         {projects.map((p, i) => (
           <FadeUp key={p.name} delay={i + 1}>
-            <div className="project-row">
-              <div className="project-left">
-                <div className="project-name">{p.name}</div>
-                <div className="project-subtitle">{p.subtitle}</div>
-                <p className="project-desc">{p.desc}</p>
-                <div className="project-metrics">
-                  {p.metrics.map((m, j) => (
-                    <div key={j} className="metric">{m}</div>
-                  ))}
-                </div>
-              </div>
-              <div className="project-right">
-                <div className="project-stack-label">Stack</div>
-                <div className="project-tags">
-                  {p.stack.map((tag) => (
-                    <span key={tag} className="ptag">{tag}</span>
-                  ))}
-                </div>
-                {p.link && (
-                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="project-link-btn">
-                    {p.link.includes('github.com') ? 'View on GitHub' : 'Live Demo'}
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                  </a>
-                )}
-              </div>
-            </div>
+            <FlipCard p={p} index={i} />
           </FadeUp>
         ))}
       </div>

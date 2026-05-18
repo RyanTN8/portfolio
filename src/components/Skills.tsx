@@ -1,17 +1,20 @@
 import FadeUp from './FadeUp'
 
-const columns = [
+const rows = [
   {
-    title: 'Languages',
-    items: ['Python', 'Java', 'Go', 'TypeScript', 'JavaScript', 'C / C++', 'SQL', 'HTML / CSS', 'Assembly (MIPS, x86, RISC-V)'],
+    label: 'Languages',
+    items: ['Python', 'Java', 'Go', 'TypeScript', 'JavaScript', 'C', 'C++', 'SQL', 'HTML / CSS', 'Assembly (MIPS, x86, RISC-V)'],
+    reverse: false,
   },
   {
-    title: 'Backend & Data',
-    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot', 'WebFlux', 'Resilience4j', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase / Firestore', 'Docker', 'AWS'],
+    label: 'Backend & Data',
+    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot', 'WebFlux', 'Resilience4j', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase', 'Firestore', 'Docker', 'AWS', 'REST APIs'],
+    reverse: true,
   },
   {
-    title: 'Frontend & Systems',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'CI/CD', 'Git', 'Linux', 'Bash', 'pytest', 'Jest'],
+    label: 'Frontend & Systems',
+    items: ['React', 'Next.js', 'Tailwind CSS', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'CI/CD', 'Git', 'Linux', 'Bash', 'pytest', 'Jest', 'Render', 'Vercel'],
+    reverse: false,
   },
 ]
 
@@ -25,19 +28,22 @@ export default function Skills() {
         </div>
       </FadeUp>
       <FadeUp delay={1}>
-        <div className="skills-table">
-          {columns.map((col) => (
-            <div key={col.title} className="skill-col">
-              <div className="skill-col-title">{col.title}</div>
-              <div className="skill-list">
-                {col.items.map((item) => (
-                  <div key={item} className="skill-item">
-                    {item}
+        <div className="marquee-section">
+          {rows.map((row) => {
+            const doubled = [...row.items, ...row.items]
+            return (
+              <div key={row.label}>
+                <div className="marquee-row-label">{row.label}</div>
+                <div className="marquee-row">
+                  <div className={`marquee-track${row.reverse ? ' reverse' : ''}`}>
+                    {doubled.map((item, i) => (
+                      <span key={i} className="m-tag">{item}</span>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </FadeUp>
     </section>
