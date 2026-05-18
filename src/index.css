@@ -101,10 +101,11 @@ nav {
   font-family: 'Syne', sans-serif;
   font-size: clamp(3.2rem, 7.5vw, 6rem);
   font-weight: 800;
-  line-height: 0.95;
+  line-height: 1.05;
   letter-spacing: -3px;
   color: var(--accent);
   margin-bottom: .5rem;
+  padding-bottom: 0.1em;
 }
 
 .hero-role-line {
