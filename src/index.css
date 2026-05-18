@@ -105,7 +105,10 @@ nav {
   letter-spacing: -3px;
   color: var(--accent);
   margin-bottom: .5rem;
-  overflow: visible;
+}
+.hero-name-last {
+  display: inline-block;
+  padding-bottom: 0.25em;
 }
 
 .hero-role-line {

@@ -60,7 +60,10 @@ export default function Hero() {
             <div className="hero-badge-dot" />
             Available Jun 2026 &nbsp;·&nbsp; Incoming @ Genuine Parts Company
           </div>
-          <h1 className="hero-name">Ryan<br />Nguyen</h1>
+          <h1 className="hero-name">
+            <span>Ryan</span><br />
+            <span className="hero-name-last">Nguyen</span>
+          </h1>
           <div className="hero-role-line">
             <span key={roleIdx} className="word-cycle">
               {roles[roleIdx]}
