@@ -8,6 +8,8 @@ export default function Nav() {
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>('section[id]')
     const onScroll = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 8
+      if (atBottom) { setActive('contact'); return }
       let current = ''
       sections.forEach((s) => {
         if (window.scrollY >= s.offsetTop - 120) current = s.id
