@@ -5,10 +5,9 @@ const roles = ['Software Engineer', 'Full-Stack Developer', 'Systems Builder', '
 const lines = [
   { tokens: [{ t: 'const', c: 'tk-kw' }, { t: ' ryan ', c: 'tk-plain' }, { t: '=', c: 'tk-op' }, { t: ' {', c: 'tk-plain' }] },
   { tokens: [{ t: '  role', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"full-stack engineer"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
-  { tokens: [{ t: '  school', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"UC Berkeley CS"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
+  { tokens: [{ t: '  school', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"UC Berkeley"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
+  { tokens: [{ t: '  major', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"computer science"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
   { tokens: [{ t: '  stack', c: 'tk-key' }, { t: ': [', c: 'tk-plain' }, { t: '"Go"', c: 'tk-str' }, { t: ', ', c: 'tk-plain' }, { t: '"Java"', c: 'tk-str' }, { t: ', ', c: 'tk-plain' }, { t: '"Python"', c: 'tk-str' }, { t: ', ', c: 'tk-plain' }, { t: '"TS"', c: 'tk-str' }, { t: '],', c: 'tk-plain' }] },
-  { tokens: [{ t: '  llms', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"benchmarked 4+"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
-  { tokens: [{ t: '  led', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '9', c: 'tk-num' }, { t: ', ', c: 'tk-plain' }, { t: '// engineers', c: 'tk-comment' }] },
   { tokens: [{ t: '  status', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"available jun 2026"', c: 'tk-str' }] },
   { tokens: [{ t: '}', c: 'tk-plain' }] },
 ]
@@ -93,7 +92,7 @@ export default function Hero() {
             <span key={roleIdx} className="word-cycle">{roles[roleIdx]}</span>
           </div>
           <p className="hero-desc">
-            UC Berkeley CS. Full-stack engineering across distributed systems, LLM
+            UC Berkeley Computer Science Student. Full-stack engineering across distributed systems, LLM
             infrastructure, and production web applications. I build things that ship.
           </p>
           <div className="hero-cta">
