@@ -6,6 +6,7 @@ interface Project {
   desc: string
   metrics: (string | JSX.Element)[]
   stack: string[]
+  link?: string
 }
 
 const projects: Project[] = [
@@ -20,6 +21,7 @@ const projects: Project[] = [
       <>Resolved production-critical <strong>Spring WebClient auth leak</strong>, eliminating 401 failures</>,
     ],
     stack: ['React', 'TypeScript', 'Spring Boot', 'WebFlux', 'Resilience4j', 'Docker', 'GitHub Actions'],
+    link: 'https://volare-phi.vercel.app/',
   },
   {
     name: 'LockIn',
@@ -32,6 +34,7 @@ const projects: Project[] = [
       <>Passes <strong>Chrome Web Store</strong> remote code policy</>,
     ],
     stack: ['JavaScript', 'Chrome MV3', 'MutationObserver', 'CSS :has()'],
+    link: 'https://github.com/RyanTN8/LockIn',
   },
   {
     name: 'HTTP Reverse Proxy',
@@ -43,6 +46,7 @@ const projects: Project[] = [
       <><strong>TLS termination</strong>, structured logging, and graceful shutdown</>,
     ],
     stack: ['Go', 'net/http/httputil'],
+    link: 'https://github.com/RyanTN8/HTTP-Reverse-Proxy-Load-Balancer',
   },
   {
     name: 'Laser Tag',
@@ -88,6 +92,12 @@ export default function Projects() {
                     <span key={tag} className="ptag">{tag}</span>
                   ))}
                 </div>
+                {p.link && (
+                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="project-link-btn">
+                    {p.link.includes('github.com') ? 'View on GitHub' : 'Live Demo'}
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                )}
               </div>
             </div>
           </FadeUp>

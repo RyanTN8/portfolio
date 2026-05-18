@@ -303,6 +303,16 @@ section {
   border-radius: 3px; color: var(--sub);
 }
 
+.project-link-btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-size: .78rem; font-weight: 600;
+  color: var(--muted); text-decoration: none;
+  transition: color .15s;
+}
+.project-link-btn:hover { color: var(--text); }
+.project-link-btn svg { transition: transform .15s; }
+.project-link-btn:hover svg { transform: translateX(2px); }
+
 /* ── Education ── */
 .edu-row {
   display: grid;
