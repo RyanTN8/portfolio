@@ -404,11 +404,18 @@ section {
   justify-content: space-between;
 }
 
+.flip-top-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: auto;
+}
 .flip-num {
   font-family: 'Outfit', sans-serif;
   font-size: .7rem; font-weight: 700;
   letter-spacing: .12em; color: var(--muted);
-  margin-bottom: auto;
+}
+.flip-icon {
+  color: var(--muted);
+  display: flex; align-items: center;
 }
 
 .flip-project-name {
