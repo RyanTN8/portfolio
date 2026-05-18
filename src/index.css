@@ -170,25 +170,54 @@ nav {
 }
 .btn-outline:hover { border-color: var(--sub); color: var(--text); }
 
-.hero-meta {
-  display: flex; flex-direction: column; gap: 1.5rem;
-  align-items: flex-end; padding-bottom: .25rem;
+/* ── Terminal ── */
+.terminal {
+  width: 340px;
+  background: #16181d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,.18), 0 4px 16px rgba(0,0,0,.12);
+  flex-shrink: 0;
+  align-self: center;
 }
-.hero-meta-item { text-align: right; }
-.hero-meta-num {
-  font-family: 'Outfit', sans-serif;
-  font-size: 2rem; font-weight: 800;
-  color: var(--accent); line-height: 1;
-  letter-spacing: -1px;
+.terminal-bar {
+  display: flex; align-items: center; gap: .4rem;
+  padding: .7rem 1rem;
+  background: #1e2027;
+  border-bottom: 1px solid #2a2d36;
 }
-.hero-meta-label {
-  font-size: .68rem; color: var(--muted);
-  letter-spacing: .05em; text-transform: uppercase;
-  margin-top: .25rem; font-weight: 500;
+.tb-dot {
+  width: 11px; height: 11px; border-radius: 50%;
+  flex-shrink: 0;
 }
-.hero-meta-divider {
-  width: 1px; height: 36px; background: var(--border2);
-  margin-left: auto;
+.tb-filename {
+  font-size: .72rem; color: #5a5f72;
+  margin-left: .5rem; font-family: 'DM Sans', monospace;
+  letter-spacing: .03em;
+}
+.terminal-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  font-family: 'DM Mono', 'Fira Mono', 'Menlo', monospace;
+  font-size: .78rem; line-height: 1.75;
+  min-height: 180px;
+}
+.t-line { white-space: pre; }
+.tk-kw      { color: #c792ea; }
+.tk-key     { color: #82aaff; }
+.tk-str     { color: #c3e88d; }
+.tk-num     { color: #f78c6c; }
+.tk-op      { color: #89ddff; }
+.tk-comment { color: #546e7a; font-style: italic; }
+.tk-plain   { color: #a6accd; }
+.t-cursor {
+  display: inline-block;
+  width: 2px; height: 1em;
+  background: #a6accd;
+  vertical-align: text-bottom;
+  animation: blink-cursor .9s step-end infinite;
+}
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; } 50% { opacity: 0; }
 }
 
 /* ── Shared layout ── */
@@ -539,9 +568,7 @@ footer {
   #hero, section { padding-left: 2rem; padding-right: 2rem; }
   footer { padding: 1.5rem 2rem; }
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-meta { flex-direction: row; align-items: flex-start; }
-  .hero-meta-divider { width: 40px; height: 1px; margin: auto 0; }
-  .hero-meta-item { text-align: left; }
+  .terminal { width: 100%; }
   .exp-row { grid-template-columns: 1fr; gap: .75rem; margin: 0; padding-left: 0; padding-right: 0; }
   .edu-row { grid-template-columns: 1fr; gap: 1rem; }
   .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
