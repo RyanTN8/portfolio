@@ -114,8 +114,8 @@ nav {
   letter-spacing: -0.5px;
   color: var(--sub);
   margin-bottom: 1.75rem;
-  height: 2.4rem;
-  overflow: hidden;
+  min-height: 3rem;
+  overflow: visible;
   display: flex;
   align-items: center;
 }
@@ -335,7 +335,7 @@ section {
 
 .flip-card {
   perspective: 1200px;
-  height: 360px;
+  height: 420px;
   cursor: pointer;
 }
 
@@ -396,7 +396,7 @@ section {
   font-size: .82rem; color: var(--sub); line-height: 1.7;
   flex: 1; overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
 
@@ -547,14 +547,10 @@ footer {
   .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
   .contact-actions { align-items: flex-start; }
   .projects-grid { grid-template-columns: 1fr; }
-  .flip-card { height: auto; }
-  .flip-card .flip-inner { transform: none !important; }
-  .flip-front { position: relative; inset: auto; border-radius: 14px 14px 0 0; border-bottom: none; }
-  .flip-back {
-    position: relative; inset: auto;
-    transform: none;
-    border-radius: 0 0 14px 14px;
-  }
+  .flip-card { height: auto; perspective: none; }
+  .flip-inner { transform: none !important; transform-style: flat; position: static; display: flex; flex-direction: column; }
+  .flip-front { position: static; backface-visibility: visible; -webkit-backface-visibility: visible; border-radius: 14px 14px 0 0; border-bottom: none; }
+  .flip-back { position: static; backface-visibility: visible; -webkit-backface-visibility: visible; transform: none; border-radius: 0 0 14px 14px; }
 }
 @media (max-width: 560px) {
   .nav-links { display: none; }
