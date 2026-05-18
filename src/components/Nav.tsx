@@ -32,11 +32,6 @@ export default function Nav() {
             </a>
           </li>
         ))}
-        <li>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
-        </li>
       </ul>
     </nav>
   )
