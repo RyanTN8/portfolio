@@ -42,7 +42,7 @@ const jobs: Job[] = [
     company: 'Newrium Foundation',
     role: 'Software Engineering Intern',
     bullets: [
-      <>Shipped <strong>15+ production-ready responsive UI components</strong> using TypeScript, React, and Next.js, improving page load time and elevating user experience across the platform's core workflows.</>,
+      <>Shipped <strong>15+ production-ready responsive UI components</strong> using TypeScript, React, and Next.js, improving page load time by 25% and standardizing frontend patterns across the platform.</>,
       <>Architected <strong>MySQL schemas</strong> storing <strong>100+ entries</strong> and built a <strong>Node.js email pipeline</strong> with SQL task queues for weekly subscriber updates, while coordinating API contract design with a 10-person team to reduce integration errors.</>,
     ],
   },
