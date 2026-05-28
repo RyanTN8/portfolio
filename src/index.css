@@ -401,12 +401,11 @@ section {
   background: var(--accent);
   border-color: var(--accent);
   display: flex; flex-direction: column;
-  justify-content: space-between;
 }
 
 .flip-top-row {
   display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: auto;
+  margin-bottom: 0;
 }
 .flip-num {
   font-family: 'Outfit', sans-serif;
@@ -422,34 +421,39 @@ section {
   font-family: 'Outfit', sans-serif;
   font-size: 1.35rem; font-weight: 800;
   color: var(--accent); letter-spacing: -.5px;
-  margin-bottom: .2rem; margin-top: .75rem;
+  margin-bottom: .25rem; margin-top: .75rem;
 }
 .flip-project-sub {
   font-size: .7rem; font-weight: 600; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: .9rem;
+  text-transform: uppercase; color: var(--muted); margin-bottom: .75rem;
 }
 .flip-project-desc {
   font-size: .82rem; color: var(--sub); line-height: 1.7;
-  flex: 1; overflow: hidden;
+  overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
 
 .flip-hint {
-  font-size: .65rem; color: var(--border2);
+  font-size: .65rem; color: var(--muted);
   letter-spacing: .08em; text-transform: uppercase;
-  margin-top: .75rem; font-weight: 600;
+  margin-top: .75rem;
+  font-weight: 600;
 }
 
 /* Back face */
-.flip-back-top { }
+.flip-back-top {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
 .flip-back-label {
   font-size: .65rem; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: rgba(250,248,243,.5);
-  margin-bottom: .6rem;
+  margin-bottom: .5rem;
 }
-.flip-metrics { display: flex; flex-direction: column; gap: .3rem; margin-bottom: 1.25rem; }
+.flip-metrics { display: flex; flex-direction: column; gap: .5rem; margin-bottom: .75rem; }
 .flip-metric {
   font-size: .78rem; color: rgba(250,248,243,.75); line-height: 1.5;
   display: flex; align-items: flex-start; gap: .5rem;
@@ -474,7 +478,9 @@ section {
   font-size: .75rem; font-weight: 700;
   color: #faf8f3; text-decoration: none;
   letter-spacing: .04em; text-transform: uppercase;
-  margin-top: .9rem;
+  margin-top: auto;
+  padding-top: .9rem;
+  flex-shrink: 0;
   transition: gap .2s;
 }
 .flip-link:hover { gap: .6rem; }

@@ -39,6 +39,7 @@ interface Project {
   metrics: (string | JSX.Element)[]
   stack: string[]
   link?: string
+  linkLabel?: string
 }
 
 const projects: Project[] = [
@@ -66,7 +67,8 @@ const projects: Project[] = [
       <>Passes <strong>Chrome Web Store</strong> remote code policy</>,
     ],
     stack: ['JavaScript', 'Chrome MV3', 'MutationObserver', 'CSS :has()'],
-    link: 'https://github.com/RyanTN8/LockIn',
+    link: 'https://chromewebstore.google.com/detail/lockin-restoring-your-att/pejnoenpchgfjcjhpmlgddoademgljmg?utm_source=item-share-cb',
+    linkLabel: 'Download Extension',
   },
   {
     name: 'HTTP Reverse Proxy',
@@ -123,7 +125,7 @@ function FlipCard({ p, index }: { p: Project; index: number }) {
             <div className="flip-back-label">Impact</div>
             <div className="flip-metrics">
               {p.metrics.map((m, i) => (
-                <div key={i} className="flip-metric">{m}</div>
+                <div key={i} className="flip-metric"><span>{m}</span></div>
               ))}
             </div>
             <div className="flip-back-label">Stack</div>
@@ -135,7 +137,7 @@ function FlipCard({ p, index }: { p: Project; index: number }) {
           </div>
           {p.link && (
             <a href={p.link} target="_blank" rel="noopener noreferrer" className="flip-link">
-              {p.link.includes('github.com') ? 'View on GitHub' : 'Live Demo'}
+              {p.linkLabel ?? (p.link.includes('github.com') ? 'View on GitHub' : 'Live Demo')}
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
