@@ -22,7 +22,7 @@ export default function Education() {
       <FadeUp delay={1}>
         <div className="edu-row">
           <div className="edu-left">
-            <div className="edu-period">2023 – Dec 2027</div>
+            <div className="edu-period">Expected Graduation: Dec 2027</div>
             <div className="edu-location">Berkeley, CA</div>
           </div>
           <div className="edu-right">
