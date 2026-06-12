@@ -10,7 +10,7 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    dates: 'May 2026 - Present',
+    dates: 'June 2026 - Present',
     company: 'Genuine Parts Company',
     badge: { label: 'Currently', incoming: true },
     role: 'Software Engineering Intern',
