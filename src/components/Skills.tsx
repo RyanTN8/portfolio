@@ -8,7 +8,7 @@ const rows = [
   },
   {
     label: 'Backend & Data',
-    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot', 'WebFlux', 'Resilience4j', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase', 'Firestore', 'Docker', 'AWS', 'REST APIs'],
+    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot', 'WebFlux', 'Resilience4j', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase', 'Firestore', 'Docker', 'AWS', 'Google Cloud', 'BigQuery', 'Vertex AI', 'REST APIs'],
     reverse: true,
   },
   {
