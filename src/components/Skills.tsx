@@ -3,17 +3,17 @@ import FadeUp from './FadeUp'
 const rows = [
   {
     label: 'Languages',
-    items: ['Python', 'Java', 'Go', 'TypeScript', 'JavaScript', 'C', 'C++', 'SQL', 'HTML / CSS', 'Assembly (MIPS, x86, RISC-V)'],
+    items: ['Python', 'Java', 'Go', 'C/C++', 'JavaScript', 'TypeScript', 'HTML/CSS (Tailwind, BOLT)', 'SQL', 'RISC-V Assembly'],
     reverse: false,
   },
   {
     label: 'Backend & Data',
-    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot', 'WebFlux', 'Resilience4j', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase', 'Firestore', 'Docker', 'AWS', 'Google Cloud', 'BigQuery', 'Vertex AI', 'REST APIs'],
+    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot (Data JPA, WebClient, WebFlux)', 'REST APIs', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase/Firestore', 'AWS', 'Google Cloud (BigQuery, Vertex AI)', 'Redis', 'Elasticsearch'],
     reverse: true,
   },
   {
     label: 'Frontend & Systems',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'CI/CD', 'Git', 'Linux', 'Bash', 'pytest', 'Jest', 'Render', 'Vercel'],
+    items: ['React', 'Next.js', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'Docker', 'CI/CD', 'Git', 'Bash', 'Linux', 'Render', 'Vercel', 'pytest', 'Jest'],
     reverse: false,
   },
 ]
