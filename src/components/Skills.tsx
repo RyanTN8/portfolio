@@ -13,7 +13,7 @@ const rows = [
   },
   {
     label: 'Frontend & Systems',
-    items: ['React', 'Next.js', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'Docker', 'CI/CD', 'Git', 'Bash', 'Linux', 'Render', 'Vercel', 'pytest', 'Jest'],
+    items: ['React', 'Next.js', 'Vite', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'Docker', 'CI/CD', 'Git', 'Bash', 'Linux', 'Render', 'Vercel', 'pytest', 'Jest'],
     reverse: false,
   },
 ]
