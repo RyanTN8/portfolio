@@ -10,9 +10,9 @@ interface Job {
 
 const jobs: Job[] = [
   {
-    dates: 'June 2026 - Present',
+    dates: 'June 2026 - August 2026',
     company: 'Genuine Parts Company',
-    badge: { label: 'Currently', incoming: true },
+    //badge: { label: 'Currently', incoming: true },
     role: 'Software Engineering Intern',
     bullets: [
       <>Built a 360° view customer intelligence platform and <strong>Elasticsearch</strong> service integrating cross-domain data aggregation.</>,

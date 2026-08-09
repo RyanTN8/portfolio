@@ -85,7 +85,7 @@ export default function Hero() {
         <div>
           <div className="hero-badge">
             <div className="hero-badge-dot" />
-            Available Aug 2026 &nbsp;·&nbsp; Currently @ Genuine Parts Company
+            Available &nbsp;·&nbsp; Recently @ Genuine Parts Company
           </div>
           <h1 className="hero-name">Ryan<br />Nguyen</h1>
           <div className="hero-role-line">
