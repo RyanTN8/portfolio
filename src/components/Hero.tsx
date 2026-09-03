@@ -8,7 +8,7 @@ const lines = [
   { tokens: [{ t: '  school', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"UC Berkeley"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
   { tokens: [{ t: '  major', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"computer science"', c: 'tk-str' }, { t: ',', c: 'tk-plain' }] },
   { tokens: [{ t: '  stack', c: 'tk-key' }, { t: ': [', c: 'tk-plain' }, { t: '"Go"', c: 'tk-str' }, { t: ', ', c: 'tk-plain' }, { t: '"Java"', c: 'tk-str' }, { t: ', ', c: 'tk-plain' }, { t: '"Python"', c: 'tk-str' }, { t: ', ', c: 'tk-plain' }, { t: '"TS"', c: 'tk-str' }, { t: '],', c: 'tk-plain' }] },
-  { tokens: [{ t: '  status', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"available aug 2026"', c: 'tk-str' }] },
+  { tokens: [{ t: '  status', c: 'tk-key' }, { t: ': ', c: 'tk-plain' }, { t: '"available may 2027"', c: 'tk-str' }] },
   { tokens: [{ t: '}', c: 'tk-plain' }] },
 ]
 
@@ -85,7 +85,7 @@ export default function Hero() {
         <div>
           <div className="hero-badge">
             <div className="hero-badge-dot" />
-            Available &nbsp;·&nbsp; Recently @ Genuine Parts Company
+            Available Summer 2027 &nbsp;·&nbsp; Incoming @ Amazon Web Services
           </div>
           <h1 className="hero-name">Ryan<br />Nguyen</h1>
           <div className="hero-role-line">
@@ -93,7 +93,7 @@ export default function Hero() {
           </div>
           <p className="hero-desc">
             UC Berkeley Computer Science Student. Full-stack engineering across distributed systems, LLM
-            infrastructure, and production web applications. I build things that ship.
+            infrastructure, and production web applications.
           </p>
           <div className="hero-cta">
             <a href="#projects" className="btn btn-solid">View Work</a>

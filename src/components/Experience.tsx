@@ -10,6 +10,15 @@ interface Job {
 
 const jobs: Job[] = [
   {
+    dates: 'August 2026 - Present',
+    company: 'Amazon Web Services',
+    badge: { label: 'Currently', incoming: true },
+    role: 'Software Engineering Intern',
+    bullets: [
+      <>Software Engineering Intern in the Automated Reasoning Group, developing software for AI and automated reasoning systems.</>,
+    ],
+  },
+  {
     dates: 'June 2026 - August 2026',
     company: 'Genuine Parts Company',
     //badge: { label: 'Currently', incoming: true },
