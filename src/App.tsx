@@ -12,10 +12,10 @@ export default function App() {
     <>
       <Nav />
       <Hero />
-      <Skills />
       <Experience />
       <Projects />
       <Education />
+      <Skills />
       <Contact />
       <Footer />
     </>

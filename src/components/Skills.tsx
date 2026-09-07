@@ -4,17 +4,14 @@ const rows = [
   {
     label: 'Languages',
     items: ['Python', 'Java', 'Go', 'C/C++', 'JavaScript', 'TypeScript', 'HTML/CSS (Tailwind, BOLT)', 'SQL', 'RISC-V Assembly'],
-    reverse: false,
   },
   {
     label: 'Backend & Data',
     items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot (Data JPA, WebClient, WebFlux)', 'REST APIs', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase/Firestore', 'AWS', 'Google Cloud (BigQuery, Vertex AI)', 'Redis', 'Elasticsearch'],
-    reverse: true,
   },
   {
     label: 'Frontend & Systems',
     items: ['React', 'Next.js', 'Vite', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'Docker', 'CI/CD', 'Git', 'Bash', 'Linux', 'Render', 'Vercel', 'pytest', 'Jest'],
-    reverse: false,
   },
 ]
 
@@ -28,20 +25,25 @@ export default function Skills() {
         </div>
       </FadeUp>
       <FadeUp delay={1}>
-        <div className="marquee-section">
-          {rows.map((row) => {
-            const doubled = [...row.items, ...row.items]
+        <div className="skills-list">
+          {rows.map((row, index) => {
+            const repeatedItems = [...row.items, ...row.items]
             return (
-              <div key={row.label}>
-                <div className="marquee-row-label">{row.label}</div>
-                <div className="marquee-row">
-                  <div className={`marquee-track${row.reverse ? ' reverse' : ''}`}>
-                    {doubled.map((item, i) => (
-                      <span key={i} className="m-tag">{item}</span>
+              <article key={row.label} className="skill-group">
+                <div className="skill-group-heading">
+                  <span className="skill-group-index">0{index + 1}</span>
+                  <div>
+                    <h3>{row.label}</h3>
+                  </div>
+                </div>
+                <div className="skill-marquee">
+                  <div className={`skill-track${index % 2 ? ' reverse' : ''}`}>
+                    {repeatedItems.map((item, itemIndex) => (
+                      <span key={`${item}-${itemIndex}`} className="skill-tag">{item}</span>
                     ))}
                   </div>
                 </div>
-              </div>
+              </article>
             )
           })}
         </div>

@@ -75,9 +75,9 @@ nav {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: end;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  align-items: center;
+  gap: 5rem;
   width: 100%;
 }
 
@@ -105,36 +105,6 @@ nav {
   letter-spacing: -3px;
   color: var(--accent);
   margin-bottom: .5rem;
-}
-
-.hero-role-line {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.2rem, 2.8vw, 2rem);
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  color: var(--sub);
-  margin-bottom: 1.75rem;
-  min-height: 3rem;
-  overflow: visible;
-  display: flex;
-  align-items: center;
-}
-
-@keyframes wordIn {
-  from {
-    transform: perspective(500px) rotateX(60deg) translateY(12px);
-    opacity: 0;
-  }
-  to {
-    transform: perspective(500px) rotateX(0deg) translateY(0);
-    opacity: 1;
-  }
-}
-
-.word-cycle {
-  display: inline-block;
-  animation: wordIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: top center;
 }
 
 .hero-desc {
@@ -169,6 +139,18 @@ nav {
   border: 1px solid var(--border2);
 }
 .btn-outline:hover { border-color: var(--sub); color: var(--text); }
+
+/* ── Hero scene ── */
+.hero-prism {
+  width: 400px;
+  height: 360px;
+  overflow: hidden;
+}
+.hero-prism canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 /* ── Terminal ── */
 .terminal {
@@ -241,64 +223,72 @@ section {
   color: var(--accent);
 }
 
-/* ── Skills marquee ── */
-.marquee-section { display: flex; flex-direction: column; gap: 1rem; overflow: hidden; }
-
-.marquee-row {
+/* ── Skills ── */
+.skills-list {
+  border: 1px solid var(--border);
+  border-radius: 12px;
   overflow: hidden;
-  position: relative;
 }
-.marquee-row::before,
-.marquee-row::after {
-  content: '';
-  position: absolute; top: 0; bottom: 0; width: 5rem;
-  z-index: 2; pointer-events: none;
+.skill-group {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background .2s ease;
 }
-.marquee-row::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg), transparent);
+.skill-group:last-child { border-bottom: 0; }
+.skill-group:hover { background: var(--surface); }
+.skill-group-heading { display: flex; align-items: flex-start; gap: .8rem; }
+.skill-group-index {
+  padding-top: .16rem;
+  color: var(--muted);
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+  font-size: .65rem;
 }
-.marquee-row::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg), transparent);
+.skill-group h3 {
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.2px;
+  line-height: 1.2;
 }
-
-.marquee-row-label {
-  font-size: .65rem; font-weight: 700; letter-spacing: .15em;
-  text-transform: uppercase; color: var(--muted);
-  margin-bottom: .6rem;
+.skill-marquee {
+  overflow: hidden;
+  align-self: center;
+  mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
 }
-
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-@keyframes scroll-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
-}
-
-.marquee-track {
-  display: flex; gap: .6rem;
-  animation: scroll-left 28s linear infinite;
+.skill-track {
+  display: flex;
+  gap: .45rem;
   width: max-content;
+  animation: skill-scroll-left 32s linear infinite;
 }
-.marquee-track.reverse {
-  animation-name: scroll-right;
+.skill-track.reverse { animation-name: skill-scroll-right; }
+.skill-group:hover .skill-track { animation-play-state: paused; }
+@keyframes skill-scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
-.marquee-track:hover,
-.marquee-row:hover .marquee-track { animation-play-state: paused; }
-
-.m-tag {
-  padding: .35rem .9rem;
-  font-size: .8rem; font-weight: 500;
-  border: 1px solid var(--border2);
-  border-radius: 100px; color: var(--sub);
-  background: var(--surface);
+@keyframes skill-scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.skill-tag {
+  padding: .4rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--sub);
+  background: rgba(255, 255, 255, .28);
+  font-size: .78rem;
+  font-weight: 500;
+  line-height: 1;
   white-space: nowrap;
-  transition: border-color .2s, color .2s;
+  transition: border-color .2s, color .2s, background .2s;
 }
-.m-tag:hover { border-color: var(--muted); color: var(--text); }
+.skill-tag:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
 
 /* ── Experience ── */
 .exp-list { display: flex; flex-direction: column; }
@@ -582,6 +572,8 @@ footer {
   footer { padding: 1.5rem 2rem; }
   .hero-inner { grid-template-columns: 1fr; }
   .terminal { width: 100%; }
+  .hero-prism { width: min(400px, 100%); margin-top: 1rem; }
+  .skill-group { grid-template-columns: 1fr; gap: 1rem; }
   .exp-row { grid-template-columns: 1fr; gap: .75rem; margin: 0; padding-left: 0; padding-right: 0; }
   .edu-row { grid-template-columns: 1fr; gap: 1rem; }
   .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -592,6 +584,7 @@ footer {
   .flip-front { position: static; backface-visibility: visible; -webkit-backface-visibility: visible; border-radius: 14px 14px 0 0; border-bottom: none; }
   .flip-back { position: static; backface-visibility: visible; -webkit-backface-visibility: visible; transform: none; border-radius: 0 0 14px 14px; }
 }
+
 @media (max-width: 560px) {
   .nav-links { display: none; }
   .hero-name { letter-spacing: -2px; }
