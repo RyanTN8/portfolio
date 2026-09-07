@@ -24,7 +24,7 @@ const jobs: Job[] = [
     //badge: { label: 'Currently', incoming: true },
     role: 'Software Engineering Intern',
     bullets: [
-      <>Built a 360° view customer intelligence platform and <strong>Elasticsearch</strong> service integrating cross-domain data aggregation.</>,
+      <>Built a customer intelligence platform providing a 360° view of customers, alongside an <strong>Elasticsearch</strong> service integrating cross-domain data aggregation.</>,
       <>Rearchitected the data retrieval pipeline, parallelizing <strong>14+ independent BigQuery workloads</strong> with multithreading and asynchronous execution, reducing end-to-end search latency by <strong>98% (210s to 23s)</strong>.</>,
       <>Designed a multi-tier <strong>Redis caching layer</strong>, accelerating lookups from <strong>2s → 100ms</strong> and reducing BigQuery compute costs by <strong>80%</strong>.</>,
       <>Optimized frontend performance through concurrent data fetching, progressive rendering, hover prefetching, and compressed API responses, reducing time-to-first-content from <strong>23s to 2s</strong> and eliminating <strong>blocking UI behavior</strong>.</>,
