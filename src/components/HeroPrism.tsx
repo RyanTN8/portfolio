@@ -3,7 +3,7 @@ import { GlassPrism } from './GlassPrism'
 
 export default function HeroPrism() {
   return (
-    <div className="hero-prism" role="img" aria-label="A rotating glass geometric form">
+    <div className="hero-prism" role="application" aria-label="An interactive rotating glass geometric form. Drag to rotate it.">
       <Canvas camera={{ position: [0, 0, 4.2], fov: 40 }} dpr={[1, 1.5]}>
         <GlassPrism
           shape="icosahedron"

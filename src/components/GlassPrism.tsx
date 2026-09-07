@@ -19,7 +19,7 @@
 
 import { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree, type ThreeEvent } from '@react-three/fiber'
 import {
   Environment,
   Float,
@@ -77,7 +77,11 @@ export function GlassPrism({
   parallax = true,
 }: GlassPrismProps) {
   const groupRef = useRef<THREE.Group>(null)
+  const dragRef = useRef<THREE.Group>(null)
   const spinRef = useRef<THREE.Group>(null)
+  const dragTarget = useRef({ x: 0, y: 0 })
+  const isDragging = useRef(false)
+  const { gl } = useThree()
 
   const s = THREE.MathUtils.clamp(speed, 0, 2)
   const iorClamped = THREE.MathUtils.clamp(ior, 1, 2.5)
@@ -107,6 +111,14 @@ export function GlassPrism({
       spin.rotation.z = Math.cos(t * 0.2) * 0.1 * Math.min(s * 2.5, 1)
     }
 
+    // Keep the visitor's rotation separate from the ambient animation, so
+    // dragging feels direct while the prism can continue its subtle idle turn.
+    const drag = dragRef.current
+    if (drag) {
+      drag.rotation.x = THREE.MathUtils.damp(drag.rotation.x, dragTarget.current.x, 12, delta)
+      drag.rotation.y = THREE.MathUtils.damp(drag.rotation.y, dragTarget.current.y, 12, delta)
+    }
+
     const group = groupRef.current
     if (group) {
       // Pointer parallax: damped tilt of the whole assembly. When disabled,
@@ -118,6 +130,30 @@ export function GlassPrism({
     }
   })
 
+  const endDrag = (event: ThreeEvent<PointerEvent>) => {
+    isDragging.current = false
+    gl.domElement.releasePointerCapture?.(event.pointerId)
+    gl.domElement.style.cursor = 'grab'
+  }
+
+  const startDrag = (event: ThreeEvent<PointerEvent>) => {
+    event.stopPropagation()
+    isDragging.current = true
+    gl.domElement.setPointerCapture?.(event.pointerId)
+    gl.domElement.style.cursor = 'grabbing'
+  }
+
+  const dragPrism = (event: ThreeEvent<PointerEvent>) => {
+    if (!isDragging.current) return
+    event.stopPropagation()
+    dragTarget.current.y += event.nativeEvent.movementX * 0.012
+    dragTarget.current.x = THREE.MathUtils.clamp(
+      dragTarget.current.x + event.nativeEvent.movementY * 0.012,
+      -Math.PI / 2,
+      Math.PI / 2,
+    )
+  }
+
   return (
     <group ref={groupRef}>
       <Float
@@ -128,7 +164,18 @@ export function GlassPrism({
       >
         {/* Spin group carries BOTH the crystal and its rim shell so the
             fresnel tracks the facets as they tumble. */}
-        <group ref={spinRef}>
+        <group
+          ref={dragRef}
+          onPointerDown={startDrag}
+          onPointerMove={dragPrism}
+          onPointerUp={endDrag}
+          onPointerCancel={endDrag}
+          onPointerOver={() => { gl.domElement.style.cursor = 'grab' }}
+          onPointerOut={() => {
+            if (!isDragging.current) gl.domElement.style.cursor = 'default'
+          }}
+        >
+          <group ref={spinRef}>
           <mesh geometry={geometry}>
             <MeshTransmissionMaterial
               transmission={1}
@@ -153,6 +200,7 @@ export function GlassPrism({
           <lineSegments geometry={wireframe} scale={1.038} raycast={() => null}>
             <lineBasicMaterial color={tintColor} transparent opacity={0.58} depthWrite={false} />
           </lineSegments>
+          </group>
         </group>
       </Float>
 
