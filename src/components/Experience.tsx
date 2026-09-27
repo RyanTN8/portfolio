@@ -15,7 +15,8 @@ const jobs: Job[] = [
     badge: { label: 'Currently', incoming: true },
     role: 'Software Engineering Intern',
     bullets: [
-      <>Software Engineering Intern in the Automated Reasoning Group, developing software for AI and automated reasoning systems.</>,
+      <>Building automated pipeline to detect and integrate <strong>open-source SMT solver releases</strong> into automated reasoning systems.</>,
+      <>Engineering end-to-end automation to <strong>build and containerize SMT solvers</strong>, benchmark new releases against relevant prior versions for <strong>soundness and regressions</strong>, and mechanically standardize solver inputs for reproducible testing</>
     ],
   },
   {

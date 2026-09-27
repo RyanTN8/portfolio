@@ -8,11 +8,11 @@ export default function Hero() {
         <div>
           <div className="hero-badge">
             <div className="hero-badge-dot" />
-            Available Summer 2027 &nbsp;·&nbsp; Incoming @ Amazon Web Services
+            Available Summer 2027 &nbsp;·&nbsp; Currently @ Amazon Web Services
           </div>
           <h1 className="hero-name">Ryan<br />Nguyen</h1>
           <p className="hero-desc">
-            UC Berkeley Computer Science Student. Full-stack engineering across distributed systems, LLM
+            UC Berkeley Computer Science Student. Full-stack engineering across distributed systems, automated integration and testing pipelines, LLM
             infrastructure, and production web applications.
           </p>
           <div className="hero-cta">
