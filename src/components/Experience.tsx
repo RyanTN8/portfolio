@@ -15,8 +15,9 @@ const jobs: Job[] = [
     badge: { label: 'Currently', incoming: true },
     role: 'Software Engineering Intern',
     bullets: [
-      <>Building automated pipeline to detect and integrate <strong>open-source SMT solver releases</strong> into automated reasoning systems.</>,
-      <>Engineering end-to-end automation to <strong>build and containerize SMT solvers</strong>, benchmark new releases against relevant prior versions for <strong>soundness and regressions</strong>, and mechanically standardize solver inputs for reproducible testing</>
+      <>Redesigned an existing <strong>11-state AWS workflow</strong> to automate SMT solver curation, replacing manual regression analysis, version isolation, and release integration, reducing release processing time by <strong>79% (2 weeks to 3 days)</strong>.</>,
+      <>Built a <strong>safety-gated LLM decision engine</strong> and deterministic soundness gates, automating <strong>78% of release decisions</strong> with <strong>98.5% agreement</strong> against scientist-reviewed benchmarks and zero unsafe approvals across 198 tests.</>,
+      <>Eliminated dependencies on a separate Lambda service by integrating solver-specific code generation, automated multi-package reviews, and recovery safeguards directly into the existing state machine, reducing <strong>95% of manual engineering</strong>.</>,
     ],
   },
   {
@@ -26,9 +27,9 @@ const jobs: Job[] = [
     role: 'Software Engineering Intern',
     bullets: [
       <>Built a customer intelligence platform providing a 360° view of customers, alongside an <strong>Elasticsearch</strong> service integrating cross-domain data aggregation.</>,
-      <>Rearchitected the data retrieval pipeline, parallelizing <strong>14+ independent BigQuery workloads</strong> with multithreading and asynchronous execution, reducing end-to-end search latency by <strong>98% (210s to 23s)</strong>.</>,
-      <>Designed a multi-tier <strong>Redis caching layer</strong>, accelerating lookups from <strong>2s → 100ms</strong> and reducing BigQuery compute costs by <strong>80%</strong>.</>,
-      <>Optimized frontend performance through concurrent data fetching, progressive rendering, hover prefetching, and compressed API responses, reducing time-to-first-content from <strong>23s to 2s</strong> and eliminating <strong>blocking UI behavior</strong>.</>,
+      <>Rearchitected the data retrieval pipeline, parallelizing <strong>14+ independent BigQuery workloads</strong> with multithreading and asynchronous execution, reducing end-to-end search latency by <strong>86% (23s to 3s)</strong>.</>,
+      <>Designed a multi-tier <strong>Redis caching layer</strong>, accelerating lookups from <strong>3s → 100ms</strong> and reducing BigQuery compute costs by <strong>80%</strong>.</>,
+      <>Optimized frontend performance through concurrent data fetching, progressive rendering, hover prefetching, and compressed API responses, reducing time-to-first-content by <strong>33% (3s to 2s)</strong> and eliminating <strong>blocking UI behavior</strong>.</>,
     ],
   },
   {
@@ -36,9 +37,8 @@ const jobs: Job[] = [
     company: 'LearnHaus AI',
     role: 'Technical Lead',
     bullets: [
-      <>Shipped the company's first <strong>LLM evaluation platform</strong>, leading a team of <strong>9 engineers</strong>, standardizing benchmarking across <strong>4+ frontier models</strong> and unblocking model selection, regression testing, and prompt iteration for ML and product teams.</>,
-      <>Designed and shipped three integrated workflows—scoring playground, human-vs-model comparison, and dataset-level pattern analysis—with unified side-by-side diffing, compressing iteration cycles from <strong>2–3 days to under 2 hours (95% reduction)</strong>.</>,
-      <>Engineered statistical diffing and analytics tooling (MAE, variance, correlation, clustering) that surfaced <strong>12+ scoring biases</strong> across <strong>1K+ production outputs</strong>, directly informing model retraining and evaluation priorities.</>,
+      <>Led <strong>9 engineers</strong> to build and launch the company's first <strong>LLM evaluation platform</strong>, standardizing benchmarking across <strong>4+ frontier models</strong> and reducing model evaluation cycles by <strong>95% (2–3 days to under 2 hours)</strong>.</>,
+      <>Engineered evaluation and regression analysis tooling (MAE, variance, correlation, clustering), identifying <strong>12+ scoring biases</strong> across <strong>1K+ production outputs</strong> through scoring, human-model comparisons, and dataset-level analysis.</>,
     ],
   },
   {
@@ -46,8 +46,7 @@ const jobs: Job[] = [
     company: 'UC Berkeley',
     role: 'Teaching Assistant — Full-Stack Development',
     bullets: [
-      <>Instructed <strong>100+ students/semester</strong> across lectures and office hours on React, Node/Express, Flask/Django, MongoDB, SQL, Firebase, and DevOps, supporting debugging and full-stack project development.</>,
-      <>Engineered course infrastructure at scale: authored <strong>20+ pytest/Jest autograders</strong> for React components, REST endpoints, and auth flows; built a submission platform for <strong>2,000+ assignments</strong>; shipped a ticketing system and <strong>15+ automation scripts</strong>.</>,
+      <>Engineered course infrastructure supporting <strong>100+ students per semester</strong>, developing <strong>20+ pytest/Jest autograders</strong> for full-stack applications, a submission platform handling <strong>2,000+ assignments</strong>, and <strong>15+ automation scripts</strong>.</>,
     ],
   },
   {
