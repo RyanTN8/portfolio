@@ -3,15 +3,19 @@ import FadeUp from './FadeUp'
 const rows = [
   {
     label: 'Languages',
-    items: ['Python', 'Java', 'Go', 'C/C++', 'JavaScript', 'TypeScript', 'HTML/CSS (Tailwind, BOLT)', 'SQL', 'RISC-V Assembly'],
+    items: ['Python', 'Java', 'Go', 'C/C++', 'JavaScript', 'TypeScript', 'SQL', 'RISC-V Assembly'],
   },
   {
-    label: 'Backend & Data',
-    items: ['Node.js', 'Express.js', 'FastAPI', 'Flask', 'Django', 'Spring Boot (Data JPA, WebClient, WebFlux)', 'REST APIs', 'PostgreSQL', 'MySQL', 'MongoDB', 'Firebase/Firestore', 'AWS', 'Google Cloud (BigQuery, Vertex AI)', 'Redis', 'Elasticsearch'],
+    label: 'Frameworks & Databases',
+    items: ['React', 'Next.js', 'Express.js', 'Spring Boot', 'FastAPI', 'PostgreSQL', 'Redis', 'Elasticsearch', 'DynamoDB'],
   },
   {
-    label: 'Frontend & Systems',
-    items: ['React', 'Next.js', 'Vite', 'Chrome Extensions (MV3)', 'TensorFlow', 'PyTorch', 'Docker', 'CI/CD', 'Git', 'Bash', 'Linux', 'Render', 'Vercel', 'pytest', 'Jest'],
+    label: 'Cloud & Infrastructure',
+    items: ['AWS (Lambda, CodeBuild, EventBridge, Bedrock, S3, IAM)', 'GCP (BigQuery, Vertex AI)', 'Docker'],
+  },
+  {
+    label: 'AI & Systems',
+    items: ['PyTorch', 'TensorFlow', 'LLM Evaluation', 'SMT Solvers (Z3, cvc5)', 'REST APIs', 'CI/CD', 'Distributed Systems'],
   },
 ]
 

@@ -15,9 +15,10 @@ const jobs: Job[] = [
     badge: { label: 'Currently', incoming: true },
     role: 'Software Engineering Intern',
     bullets: [
-      <>Redesigned an existing <strong>11-state AWS workflow</strong> to automate SMT solver curation, replacing manual regression analysis, version isolation, and release integration, reducing release processing time by <strong>79% (2 weeks to 3 days)</strong>.</>,
-      <>Built a <strong>safety-gated LLM decision engine</strong> and deterministic soundness gates, automating <strong>78% of release decisions</strong> with <strong>98.5% agreement</strong> against scientist-reviewed benchmarks and zero unsafe approvals across 198 tests.</>,
-      <>Eliminated dependencies on a separate Lambda service by integrating solver-specific code generation, automated multi-package reviews, and recovery safeguards directly into the existing state machine, reducing <strong>95% of manual engineering</strong>.</>,
+      <>Engineered an end-to-end <strong>SMT solver integration pipeline</strong> for Amazon Trusted Solver (ATS), reducing release adoption time from <strong>5 days to 4 hours</strong> by automating <strong>95% of manual engineering work</strong> across the release lifecycle.</>,
+      <>Designed a distributed release orchestration system using <strong>Lambda, CodeBuild, and DynamoDB conditional writes</strong>, ensuring atomic release claiming, concurrency-safe execution, and automated recovery across solver integration workflows.</>,
+      <>Developed a deterministic regression evaluation engine leveraging <strong>PAR-2 scoring</strong>, per-bundle performance analysis, and baseline-relative soundness checks, enforcing <strong>4 fail-closed safety invariants</strong> with zero unsafe approvals across 198 tests.</>,
+      <>Integrated <strong>Amazon Bedrock LLMs</strong> into a safety-gated release decision engine, automating <strong>78% of onboarding decisions</strong> with <strong>98.5% agreement</strong> against scientist-reviewed benchmarks and validating recommendations against 42 release documents.</>,
     ],
   },
   {
@@ -42,20 +43,11 @@ const jobs: Job[] = [
     ],
   },
   {
-    dates: 'Nov 2025 – Present',
+    dates: 'Nov 2025 – May 2026',
     company: 'UC Berkeley',
     role: 'Teaching Assistant — Full-Stack Development',
     bullets: [
       <>Engineered course infrastructure supporting <strong>100+ students per semester</strong>, developing <strong>20+ pytest/Jest autograders</strong> for full-stack applications, a submission platform handling <strong>2,000+ assignments</strong>, and <strong>15+ automation scripts</strong>.</>,
-    ],
-  },
-  {
-    dates: 'Sep 2025 – Dec 2025',
-    company: 'Newrium Foundation',
-    role: 'Software Engineering Intern',
-    bullets: [
-      <>Shipped <strong>15+ production-ready responsive UI components</strong> using TypeScript, React, and Next.js.</>,
-      <>Architected <strong>MySQL schemas</strong> storing <strong>100+ entries</strong> and built a <strong>Node.js email pipeline</strong> with SQL task queues.</>,
     ],
   },
 ]
