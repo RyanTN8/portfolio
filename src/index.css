@@ -317,6 +317,11 @@ section {
 .exp-co {
   font-size: .82rem; font-weight: 600; color: var(--sub);
 }
+.exp-location {
+  margin-top: .2rem;
+  font-size: .75rem; color: var(--muted);
+  font-style: italic;
+}
 .exp-badge {
   display: inline-block; margin-top: .6rem;
   padding: .2rem .55rem;
